@@ -336,7 +336,7 @@ a {
          }
       }
       @media (max-width: 767px) {
-         max-width: 70%;
+         max-width: 80%;
          margin: 0 auto;
       }
    }
@@ -346,7 +346,8 @@ a {
          font-family: "IQOSSansArabicW04-Arabic-Bold";
          color: #fff;
       }
-      .form__control {
+      .form__control,
+      .form-control {
          margin-top: 15px;
          display: block;
          width: 100%;
@@ -365,6 +366,16 @@ a {
          &:focus {
             outline: none;
             border-color: $secondary;
+         }
+      }
+      .row {
+         display: flex;
+         justify-content: space-between;
+         .col {
+            flex: 0 0 calc((100% / 3) - 10px);
+            .form-control {
+               line-height: inherit;
+            }
          }
       }
    }
@@ -537,7 +548,6 @@ table {
 .video {
    width: 100%;
    margin: 30px auto 0;
-   max-width: 320px;
    [style*="--aspect-ratio"] > :first-child {
       width: 100%;
    }
