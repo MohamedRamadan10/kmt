@@ -11,6 +11,25 @@
       />
       <title>IQOS Heated Tobacco Products | IQOS Egypt</title>
       <link rel="stylesheet" href="assets/css/styles.min.css" />
+      <script>
+         var secondsThree = 60;
+         var fooThree;
+         function updateSecsThree() {
+            document.getElementById("secondsThree").innerHTML = secondsThree;
+            secondsThree--;
+            if (secondsThree == -1) {
+               clearInterval(fooThree);
+               document.getElementById("secondsThree").innerHTML = "انتهاء";
+               window.location.href = "https://www.iqos.com/eg/ar/home.html";
+            }
+         }
+         function countdownTimer() {
+            fooThree = setInterval(function () {
+               updateSecsThree();
+            }, 1000);
+         }
+         countdownTimer();
+      </script>
    </head>
 
    <body>
@@ -44,6 +63,7 @@
                   allowfullscreen
                ></iframe>
             </div>
+            <div class="time text__center btn" id="secondsThree"></div>
             <div class="desc text__white text__left">
                رقم التسحيل الضريبي (450-255-747)
             </div>
