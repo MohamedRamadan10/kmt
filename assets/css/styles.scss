@@ -261,9 +261,10 @@ a {
          margin-bottom: 15px;
          @media (max-width: 767px) {
             margin-bottom: 5px;
-            flex: 0 0 46%;
-            max-width: 46%;
+            flex: 0 0 48%;
+            max-width: 48%;
             font-size: 14px;
+            padding: 5px;
          }
          &:not(:last-child) {
             margin-left: 15px;
