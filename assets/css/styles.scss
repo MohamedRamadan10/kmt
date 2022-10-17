@@ -264,7 +264,6 @@ a {
             flex: 0 0 48%;
             max-width: 48%;
             font-size: 14px;
-            padding: 5px;
          }
          &:not(:last-child) {
             margin-left: 15px;
@@ -286,6 +285,9 @@ a {
             position: relative;
             overflow: hidden;
             z-index: 0;
+            @media (max-width: 767px) {
+               padding: 5px;
+            }
             &::before {
                background-color: #fffdfb;
                content: "";
